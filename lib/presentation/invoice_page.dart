@@ -84,12 +84,53 @@ class InvoicePage extends StatelessWidget {
               ]),
               const SizedBox(height: 10.0),
               Container(
-                width: 437,
-                height: 120,
-                decoration: BoxDecoration(
-                    color: Color(0XFF3A49F9),
-                    borderRadius: BorderRadius.circular(14)),
-              )
+                  width: 437,
+                  height: 120,
+                  decoration: BoxDecoration(
+                      color: Color(0XFF3A49F9),
+                      borderRadius: BorderRadius.circular(14)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: const [
+                            Text(
+                              'Paid Invoices (till August 2022)',
+                              style: TextStyle(
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0XFFFFFFFF)),
+                            ),
+                            Spacer(),
+                          ],
+                        ),
+                        const Spacer(),
+                        Row(
+                          children: const [
+                            Text(
+                              '5',
+                              style: TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0XFFFFFFFF)),
+                            )
+                          ],
+                        ),
+                        Spacer(),
+                        Row(children: [
+                          Text(
+                            '+ Increased by 30% since July 2022',
+                            style: TextStyle(
+                              fontSize: 10.0,
+                              fontWeight: FontWeight.w500,
+                              color: const Color(0XFFFFFFFF).withOpacity(.80),
+                            ),
+                          ),
+                        ])
+                      ],
+                    ),
+                  )),
             ],
           ),
         ),
