@@ -23,6 +23,7 @@ class InvoicePage extends StatelessWidget {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const Text(
                         'Welcome!',
@@ -93,7 +94,7 @@ class InvoicePage extends StatelessWidget {
                       color: Color(0XFF3A49F9),
                       borderRadius: BorderRadius.circular(14)),
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: EdgeInsets.all(20),
                     child: Column(children: [
                       Row(
                         children: const [
@@ -116,55 +117,81 @@ class InvoicePage extends StatelessWidget {
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0XFFFFFFFF)),
-                          )
+                          ),
                         ],
                       ),
                       const Spacer(),
-                      Row(children: [
-                        Text(
-                          '+ Increased by 30% since July 2022',
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                            fontSize: 10.0,
-                            fontWeight: FontWeight.w500,
-                            color: const Color(0XFFFFFFFF).withOpacity(.80),
+                      Row(
+                        children: [
+                          Text(
+                            '+ Increased by 30% since July 2022',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontSize: 10.0,
+                              fontWeight: FontWeight.w500,
+                              color: const Color(0XFFFFFFFF).withOpacity(.80),
+                            ),
                           ),
-                        ),
-                      ]),
+                        ],
+                      ),
                     ]),
                   )),
               const SizedBox(
                 height: 11,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Container(
-                    height: 40,
-                    width: 140.98,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text('View Custom Report'),
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.white),
-                        foregroundColor:
-                            MaterialStateProperty.all<Color>(Color(0XFF938AF5)),
-                        textStyle: MaterialStateProperty.all<TextStyle>(
-                          TextStyle(
-                              fontSize: 16.0, fontWeight: FontWeight.w500),
-                        ),
-                        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-                        ),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                      foregroundColor: MaterialStateProperty.all<Color>(
+                          const Color(0XFF938AF5)),
+                      textStyle: MaterialStateProperty.all<TextStyle>(
+                        const TextStyle(
+                            fontSize: 16.0, fontWeight: FontWeight.w500),
+                      ),
+                      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        const EdgeInsets.symmetric(
+                            vertical: 12, horizontal: 14),
+                      ),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
                         ),
                       ),
                     ),
+                    child: const Text('View Custom Report'),
                   ),
+                ],
+              ),
+              const SizedBox(
+                height: 22,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Recent Activities',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF000000),
+                    ),
+                  ),
+                  Spacer(),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View all',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          decoration: TextDecoration.underline,
+                          color: Color(0xFF938AF5),
+                        ),
+                      ))
                 ],
               )
             ],
