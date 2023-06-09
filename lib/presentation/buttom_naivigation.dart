@@ -1,33 +1,37 @@
+import 'package:arc_mobile/presentation/invoice_page.dart';
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
+class BottomNavigation extends StatefulWidget {
+  const BottomNavigation({Key? key}) : super(key: key);
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<BottomNavigation> createState() => _BottomNavigationState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _currentIndex = 0;
-
-  final List<Widget> _screens = [
-    // HomeScreen(),
-    // PaymentScreen(),
-    // BusinessTools(),
+class _BottomNavigationState extends State<BottomNavigation> {
+  int _Index = 0;
+  final List<Widget> _BottomNavigationList = [
+    //Home(),
+    //Payments(),
+    InvoicePage(),
     // FileVault(),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_currentIndex],
+      body: _BottomNavigationList[_Index],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _Index,
         onTap: (int index) {
           setState(() {
-            _currentIndex = index;
+            _Index = index;
           });
         },
+        backgroundColor: Color(0XFFFFFFFF),
+        selectedItemColor: Color(0XFF0B0830),
+        unselectedItemColor: const Color(0xFFE7E6EA),
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -35,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.explore),
-            label: 'Payment',
+            label: 'Payments',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
@@ -50,39 +54,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-// class HomeScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Text('Home Screen'),
-//     );
-//   }
-// }
-
-// class PaymentScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Text('Explore Screen'),
-//     );
-//   }
-// }
-
-// class BusinessTools extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Text('Notifications Screen'),
-//     );
-//   }
-// }
-
-// class FileVault extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Text('Profile Screen'),
-//     );
-//   }
-// }
