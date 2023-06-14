@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CreateInvoicePage extends StatelessWidget {
-  const CreateInvoicePage({super.key});
+class InvoiceFrequencyPage extends StatelessWidget {
+  const InvoiceFrequencyPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -86,16 +86,17 @@ class CreateInvoicePage extends StatelessWidget {
               height: 16,
             ),
             DetailsEntry(
-                content: 'Client Name', contentHint: 'Enter Client Name'),
+                content: 'Client Name', contentHint: '   Enter Client Name'),
             SizedBox(
               height: 16,
             ),
             DetailsEntry(
-                content: 'Email Address', contentHint: 'Enter Email Address'),
+                content: 'Email Address',
+                contentHint: '   Enter Email Address'),
             SizedBox(
               height: 16,
             ),
-            DetailsEntry(content: 'Address', contentHint: 'Address'),
+            DetailsEntry(content: 'Address', contentHint: '   Address'),
             SizedBox(
               height: 2,
             ),
@@ -116,19 +117,19 @@ class CreateInvoicePage extends StatelessWidget {
             ),
             DetailsEntry(
                 content: 'Work scope',
-                contentHint: 'Describe your contract scope'),
+                contentHint: '    Describe your contract scope'),
             SizedBox(
               height: 16,
             ),
             DetailsEntry(
                 content: 'Supplementary items',
-                contentHint: 'Additional materials'),
+                contentHint: '    Additional materials'),
             SizedBox(
               height: 16,
             ),
             DetailsEntry(
                 content: 'Invoice note',
-                contentHint: 'Enter any note to your client'),
+                contentHint: '    Enter any note to your client'),
             SizedBox(
               height: 20,
             ),
@@ -151,19 +152,16 @@ class CreateInvoicePage extends StatelessWidget {
                       border: Border.all(
                         color: Color(0XFF0B0830).withOpacity(0.1),
                       )),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Center(
-                      child: TextFormField(
-                        textAlign: TextAlign.left,
-                        decoration: InputDecoration(
-                          hintText: 'DD/MM/YY',
-                          hintStyle: TextStyle(
-                              fontSize: 14,
-                              fontFamily: 'SF-Pro-Display',
-                              color: Color(0XffB3B3B3)),
-                          border: InputBorder.none,
-                        ),
+                  child: Center(
+                    child: TextFormField(
+                      textAlign: TextAlign.left,
+                      decoration: InputDecoration(
+                        hintText: '  DD/MM/YY',
+                        hintStyle: TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'SF-Pro-Display',
+                            color: Color(0XffB3B3B3)),
+                        border: InputBorder.none,
                       ),
                     ),
                   ),
@@ -184,19 +182,16 @@ class CreateInvoicePage extends StatelessWidget {
                       border: Border.all(
                         color: Color(0XFF0B0830).withOpacity(0.1),
                       )),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Center(
-                      child: TextFormField(
-                        textAlign: TextAlign.left,
-                        decoration: InputDecoration(
-                          hintText: 'USD',
-                          hintStyle: TextStyle(
-                              fontSize: 14,
-                              fontFamily: 'SF-Pro-Display',
-                              color: Color(0XffB3B3B3)),
-                          border: InputBorder.none,
-                        ),
+                  child: Center(
+                    child: TextFormField(
+                      textAlign: TextAlign.left,
+                      decoration: InputDecoration(
+                        hintText: '   USD',
+                        hintStyle: TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'SF-Pro-Display',
+                            color: Color(0XffB3B3B3)),
+                        border: InputBorder.none,
                       ),
                     ),
                   ),
@@ -225,19 +220,16 @@ class CreateInvoicePage extends StatelessWidget {
                       border: Border.all(
                         color: Color(0XFF0B0830).withOpacity(0.1),
                       )),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Center(
-                      child: TextFormField(
-                        textAlign: TextAlign.left,
-                        decoration: InputDecoration(
-                          hintText: '12,586,600',
-                          hintStyle: TextStyle(
-                              fontSize: 14,
-                              fontFamily: 'SF-Pro-Display',
-                              color: Color(0XffB3B3B3)),
-                          border: InputBorder.none,
-                        ),
+                  child: Center(
+                    child: TextFormField(
+                      textAlign: TextAlign.left,
+                      decoration: InputDecoration(
+                        hintText: '   12,586,600',
+                        hintStyle: TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'SF-Pro-Display',
+                            color: Color(0XffB3B3B3)),
+                        border: InputBorder.none,
                       ),
                     ),
                   ),
@@ -249,7 +241,7 @@ class CreateInvoicePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Icon(
-                  Icons.check_box_outline_blank,
+                  Icons.check_box,
                   size: 16,
                   color: Color(0xff0B0830),
                 ),
@@ -267,7 +259,89 @@ class CreateInvoicePage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 30,
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Text(
+                    'Frequency',
+                    style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: 'SF-Pro-Display',
+                        color: Color(0XFF4B4B4B)),
+                  ),
+                  SizedBox(
+                    width: 18,
+                  ),
+                  Container(
+                    height: 34,
+                    width: 262,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Color(0XFF0B0830).withOpacity(0.1),
+                        )),
+                    child: IconButton(
+                        alignment: Alignment.bottomRight,
+                        onPressed: () {},
+                        icon: Icon(Icons.expand_more_outlined)),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 13,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(children: [
+                Text(
+                  'Duration',
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: 'SF-Pro-Display',
+                      color: Color(0XFF4B4B4B)),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Container(
+                  height: 34,
+                  width: 129,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: Color(0XFF0B0830).withOpacity(0.1),
+                      )),
+                  child: IconButton(
+                      alignment: Alignment.bottomRight,
+                      onPressed: () {},
+                      icon: Icon(Icons.expand_more_outlined)),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  height: 34,
+                  width: 129,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: Color(0XFF0B0830).withOpacity(0.1),
+                      )),
+                  child: IconButton(
+                      alignment: Alignment.bottomRight,
+                      onPressed: () {},
+                      icon: Icon(Icons.expand_more_outlined)),
+                ),
+              ]),
+            ),
+            SizedBox(
+              height: 27,
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 58.0),
@@ -384,19 +458,16 @@ class DetailsEntry extends StatelessWidget {
                 border: Border.all(
                   color: Color(0XFF0B0830).withOpacity(0.1),
                 )),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: Center(
-                child: TextFormField(
-                  textAlign: TextAlign.left,
-                  decoration: InputDecoration(
-                    hintText: contentHint,
-                    hintStyle: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'SF-Pro-Display',
-                        color: Color(0XffB3B3B3)),
-                    border: InputBorder.none,
-                  ),
+            child: Center(
+              child: TextFormField(
+                textAlign: TextAlign.left,
+                decoration: InputDecoration(
+                  hintText: contentHint,
+                  hintStyle: TextStyle(
+                      fontSize: 14,
+                      fontFamily: 'SF-Pro-Display',
+                      color: Color(0XffB3B3B3)),
+                  border: InputBorder.none,
                 ),
               ),
             ),
