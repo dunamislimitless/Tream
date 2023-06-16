@@ -144,24 +144,27 @@ class InvoiceFrequencyPage extends StatelessWidget {
                       fontFamily: 'SF-Pro-Display',
                       color: Color(0XFF4B4B4B)),
                 ),
-                Container(
-                  height: 34,
-                  width: 100,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: Color(0XFF0B0830).withOpacity(0.1),
-                      )),
-                  child: Center(
-                    child: TextFormField(
-                      textAlign: TextAlign.left,
-                      decoration: InputDecoration(
-                        hintText: '  DD/MM/YY',
-                        hintStyle: TextStyle(
-                            fontSize: 14,
-                            fontFamily: 'SF-Pro-Display',
-                            color: Color(0XffB3B3B3)),
-                        border: InputBorder.none,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Container(
+                    height: 34,
+                    width: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Color(0XFF0B0830).withOpacity(0.1),
+                        )),
+                    child: Center(
+                      child: TextFormField(
+                        textAlign: TextAlign.left,
+                        decoration: InputDecoration(
+                          hintText: '  DD/MM/YY',
+                          hintStyle: TextStyle(
+                              fontSize: 14,
+                              fontFamily: 'SF-Pro-Display',
+                              color: Color(0XffB3B3B3)),
+                          border: InputBorder.none,
+                        ),
                       ),
                     ),
                   ),
@@ -182,16 +185,19 @@ class InvoiceFrequencyPage extends StatelessWidget {
                       border: Border.all(
                         color: Color(0XFF0B0830).withOpacity(0.1),
                       )),
-                  child: Center(
-                    child: TextFormField(
-                      textAlign: TextAlign.left,
-                      decoration: InputDecoration(
-                        hintText: '   USD',
-                        hintStyle: TextStyle(
-                            fontSize: 14,
-                            fontFamily: 'SF-Pro-Display',
-                            color: Color(0XffB3B3B3)),
-                        border: InputBorder.none,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Center(
+                      child: TextFormField(
+                        textAlign: TextAlign.left,
+                        decoration: InputDecoration(
+                          hintText: 'USD',
+                          hintStyle: TextStyle(
+                              fontSize: 14,
+                              fontFamily: 'SF-Pro-Display',
+                              color: Color(0XffB3B3B3)),
+                          border: InputBorder.none,
+                        ),
                       ),
                     ),
                   ),
@@ -220,16 +226,19 @@ class InvoiceFrequencyPage extends StatelessWidget {
                       border: Border.all(
                         color: Color(0XFF0B0830).withOpacity(0.1),
                       )),
-                  child: Center(
-                    child: TextFormField(
-                      textAlign: TextAlign.left,
-                      decoration: InputDecoration(
-                        hintText: '   12,586,600',
-                        hintStyle: TextStyle(
-                            fontSize: 14,
-                            fontFamily: 'SF-Pro-Display',
-                            color: Color(0XffB3B3B3)),
-                        border: InputBorder.none,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Center(
+                      child: TextFormField(
+                        textAlign: TextAlign.left,
+                        decoration: InputDecoration(
+                          hintText: '12,586,600',
+                          hintStyle: TextStyle(
+                              fontSize: 14,
+                              fontFamily: 'SF-Pro-Display',
+                              color: Color(0XffB3B3B3)),
+                          border: InputBorder.none,
+                        ),
                       ),
                     ),
                   ),
