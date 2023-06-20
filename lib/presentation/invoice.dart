@@ -194,37 +194,34 @@ class Invoice extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  height: 30,
-                  width: 140,
-                  decoration: BoxDecoration(
-                    color: Color(0xffF7F7FF),
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Center(
-                        child: TextFormField(
-                          textAlign: TextAlign.left,
-                          decoration: InputDecoration(
-                            hintText: '  DD/MM/YY',
-                            hintStyle: TextStyle(
-                                fontSize: 10,
-                                fontFamily: 'SF-Pro-Display',
-                                color: Color(0XffB3B3B3)),
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                      Icon(Icons.search)
-                    ],
-                  ),
-                )
+                SizedBox(
+                  width: 5,
+                ),
+                // Container(
+                //   height: 30,
+                //   width: 128,
+                //   decoration: BoxDecoration(
+                //     color: Color(0xffF7F7FF),
+                //     borderRadius: BorderRadius.circular(6),
+                //   ),
+                //   child: Row(
+                //     children: [
+                //       TextFormField(
+                //         textAlign: TextAlign.left,
+                //         decoration: InputDecoration(
+                //           hintText: '  DD/MM/YY',
+                //           hintStyle: TextStyle(
+                //               fontSize: 10,
+                //               fontFamily: 'SF-Pro-Display',
+                //               color: Color(0XffB3B3B3)),
+                //           border: InputBorder.none,
+                //         ),
+                //       ),
+                //       Icon(Icons.search)
+                //     ],
+                //   ),
+                // )
               ],
-            ),
-            SizedBox(
-              height: 34,
             ),
           ]),
         ),
