@@ -267,10 +267,43 @@ class InvoiceEntry extends StatelessWidget {
                 SizedBox(
                   height: 4,
                 ),
-                TableList(
-                    content1: 'Work Scope/Supplementary Item',
-                    content2: 'Amount',
-                    content3: 'item'),
+                Container(
+                  height: 35,
+                  width: MediaQuery.of(context).size.width,
+                  child: TableList(
+                      content1: 'Work Scope/Supplementary Item',
+                      content2: 'Amount',
+                      content3: 'item'),
+                ),
+                Row(
+                  children: [
+                    Container(
+                      height: 26,
+                      width: MediaQuery.of(context).size.width * 0.70,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(6.0),
+                            bottomRight: Radius.circular(6),
+                          ),
+                          border:
+                              Border.all(color: Colors.black.withOpacity(0.1))),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 8.0, right: 8),
+                        child: Row(
+                          children: [
+                            Text('Web icons'),
+                            Spacer(),
+                            Text('\$7.00')
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(Icons.more_vert)
+                  ],
+                ),
                 SizedBox(height: 5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,

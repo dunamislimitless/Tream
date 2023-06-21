@@ -1,3 +1,4 @@
+import 'package:arc_mobile/presentation/global_widget/second_list.dart';
 import 'package:flutter/material.dart';
 
 class Invoice extends StatelessWidget {
@@ -151,14 +152,12 @@ class Invoice extends StatelessWidget {
                   width: 100,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: Colors.white,
-                      )),
+                      border: Border.all(color: Colors.white, width: 3.0)),
                   child: Center(
                     child: TextFormField(
                       textAlign: TextAlign.left,
                       decoration: InputDecoration(
-                        hintText: '  DD/MM/YY',
+                        hintText: 'DD/MM/YY',
                         hintStyle: TextStyle(
                             fontSize: 10,
                             fontFamily: 'SF-Pro-Display',
@@ -197,32 +196,109 @@ class Invoice extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                // Container(
-                //   height: 30,
-                //   width: 128,
-                //   decoration: BoxDecoration(
-                //     color: Color(0xffF7F7FF),
-                //     borderRadius: BorderRadius.circular(6),
-                //   ),
-                //   child: Row(
-                //     children: [
-                //       TextFormField(
-                //         textAlign: TextAlign.left,
-                //         decoration: InputDecoration(
-                //           hintText: '  DD/MM/YY',
-                //           hintStyle: TextStyle(
-                //               fontSize: 10,
-                //               fontFamily: 'SF-Pro-Display',
-                //               color: Color(0XffB3B3B3)),
-                //           border: InputBorder.none,
-                //         ),
-                //       ),
-                //       Icon(Icons.search)
-                //     ],
-                //   ),
-                // )
+                Container(
+                  height: 30,
+                  width: MediaQuery.of(context).size.width * 0.75,
+                  decoration: BoxDecoration(
+                      color: Color(0xffE5E5E5),
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(
+                        color: Color(0xff0B0830).withOpacity(0.1),
+                      )),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 14, right: 11.5, top: 1, bottom: 2),
+                    child: TextFormField(
+                      textAlign: TextAlign.left,
+                      decoration: InputDecoration(
+                        suffixIcon: Icon(
+                          Icons.search,
+                          color: Color(0XffB3B3B3),
+                        ),
+                        hintText: 'Searching... ',
+                        hintStyle: TextStyle(
+                            fontSize: 10,
+                            fontFamily: 'SF-Pro-Display',
+                            color: Color(0XffB3B3B3)),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
+            SizedBox(
+              height: 34,
+            ),
+            Container(
+                width: 388,
+                height: 29,
+                decoration: BoxDecoration(
+                    color: Color(0xffF2F2F6),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 18),
+                  child: Row(
+                    children: [
+                      Icon(Icons.check_box_outline_blank),
+                      Icon(Icons.arrow_drop_down),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Text(
+                        '#ID',
+                        style: TextStyle(
+                            fontFamily: 'SF-Pro-Display',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 10,
+                            color: Color(0xff4B4B4B)),
+                      ),
+                      SizedBox(
+                        width: 29,
+                      ),
+                      Text(
+                        'Due Date',
+                        style: TextStyle(
+                            fontFamily: 'SF-Pro-Display',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 10,
+                            color: Color(0xff4B4B4B)),
+                      ),
+                      SizedBox(
+                        width: 28,
+                      ),
+                      Text(
+                        'Client Status',
+                        style: TextStyle(
+                            fontFamily: 'SF-Pro-Display',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 10,
+                            color: Color(0xff4B4B4B)),
+                      ),
+                      SizedBox(width: 11),
+                      Text(
+                        'Amount',
+                        style: TextStyle(
+                            fontFamily: 'SF-Pro-Display',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 10,
+                            color: Color(0xff4B4B4B)),
+                      ),
+                      SizedBox(
+                        width: 27.2,
+                      ),
+                      Icon(Icons.more_vert),
+                    ],
+                  ),
+                )),
+            SizedBox(
+              height: 17,
+            ),
+            SecondInvoiceList(
+              text1: '#1001',
+              text2: '12/11/2022',
+              text3: '\$2500',
+            )
           ]),
         ),
       ),

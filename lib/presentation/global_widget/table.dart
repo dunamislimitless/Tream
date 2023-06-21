@@ -13,11 +13,10 @@ class TableList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       Container(
         height: 34,
+        width: MediaQuery.of(context).size.width,
         child: Table(
           border: TableBorder.all(
               color: Color(0xff0B0830).withOpacity(0.1),
@@ -60,41 +59,9 @@ class TableList extends StatelessWidget {
                         color: Color(0xff4B4B4B))),
               ),
             ]),
-            TableRow(children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('Work Scope/Supplementary Item',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'SF-Pro-Display',
-                        fontSize: 12,
-                        color: Color(0xff4B4B4B))),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('Amount',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'SF-Pro-Display',
-                        fontSize: 12,
-                        color: Color(0xff4B4B4B))),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 18, vertical: 8),
-                child: Text('Item',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'SF-Pro-Display',
-                        fontSize: 12,
-                        color: Color(0xff4B4B4B))),
-              ),
-            ]),
           ],
         ),
       ),
-    ])));
+    ]));
   }
 }
